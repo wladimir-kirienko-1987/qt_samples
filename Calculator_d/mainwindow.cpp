@@ -124,7 +124,7 @@ void MainWindow::on_pushButton_equal_clicked()
         if (num_second == 0){
             ui->result_show->setText("0");
         } else{
-            labelNumber = num_first + num_second;
+            labelNumber = num_first / num_second;
             new_label = QString::number(labelNumber, 'g', 15);
             ui->result_show->setText(new_label);
         }
