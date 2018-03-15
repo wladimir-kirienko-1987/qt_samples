@@ -43,6 +43,10 @@ void MainWindow::digits_numbers()
     double all_numbers;
     QString new_label;
 
+    if ((ui->result_show->text().size() > 14) ||
+        (ui->result_show->text().contains("e")) )
+        return;
+
     if (ui->result_show->text().contains(".") && button->text() == "0"){
         new_label = ui->result_show->text() + button->text();
     } else {
